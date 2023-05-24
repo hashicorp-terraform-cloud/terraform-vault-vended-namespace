@@ -30,7 +30,7 @@ resource "vault_mount" "pki" {
 
 resource "vault_pki_secret_backend_role" "role" {
   backend            = vault_mount.pki.path
-  name               = "${var.vault_namespace}-default-role}"
+  name               = "${var.vault_namespace}-default-role"
   ttl                = 86400
   allow_ip_sans      = true
   key_type           = "rsa"

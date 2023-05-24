@@ -19,7 +19,7 @@ resource "vault_azure_auth_backend_config" "azure" {
 
 resource "vault_azure_auth_backend_role" "azure" {
   backend                = vault_auth_backend.azure.path
-  role                   = "${var.vault_namespace}-default-role}"
+  role                   = "${var.vault_namespace}-default-role"
   bound_subscription_ids = [var.az_subscription_id]
   token_ttl              = 3600
   token_max_ttl          = 86400

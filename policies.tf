@@ -3,7 +3,7 @@ resource "vault_policy" "kv-policy" {
 
   policy = <<EOT
 path "static/data/*" {
-  capabilities = ["*"]
+  capabilities = ["read","list"]
 }
 
 EOT
@@ -16,7 +16,7 @@ resource "vault_policy" "pki-policy" {
 
   policy = <<EOT
 path "pki/issue/*" {
-  capabilities = ["*"]
+  capabilities = ["read","create","list"]
 }
 
 EOT
