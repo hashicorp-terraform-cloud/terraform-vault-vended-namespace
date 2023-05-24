@@ -8,15 +8,15 @@ resource "vault_mount" "static" {
 }
 
 # Hackity Hack
-resource "time_sleep" "kv_wait_10_seconds" {
+resource "time_sleep" "kv_wait_3_seconds" {
   depends_on      = [vault_mount.static]
-  create_duration = "10s"
+  create_duration = "3s"
 }
 
 resource "vault_kv_secret_backend_v2" "static" {
   mount      = vault_mount.static.path
   namespace  = vault_namespace.vended-namespace.path_fq
-  depends_on = [time_sleep.kv_wait_10_seconds]
+  depends_on = [time_sleep.kv_wait_3_seconds]
 }
 
 resource "vault_mount" "pki" {
