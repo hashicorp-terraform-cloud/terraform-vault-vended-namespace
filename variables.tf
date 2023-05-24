@@ -20,6 +20,11 @@ variable "az_tenant_id" {
   type = string
 }
 
+variable "az_subscription_id" {
+  type    = string
+  default = "11111111-2222-3333-4444-555555555555"
+}
+
 variable "az_client_id" {
   type = string
 }
@@ -29,6 +34,6 @@ variable "az_client_secret" {
   sensitive = true
 }
 
-variable "az_aad_app" {
+variable "az_aad_app_url" {
   type = string
 }
