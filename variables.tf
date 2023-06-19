@@ -1,15 +1,6 @@
-variable "vault_token" {
-  type      = string
-  sensitive = true
-}
-
-variable "vault_public_endpoint_url" {
-  type = string
-}
-
 variable "vault_parent_namespace_path_fq" {
   type    = string
-  default = "admin/vended"
+  default = "vended"
 }
 
 variable "vault_namespace" {
