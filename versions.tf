@@ -12,8 +12,6 @@ terraform {
 }
 
 provider "vault" {
-  address = var.vault_public_endpoint_url
-  token   = var.vault_token
 }
 
 provider "time" {}
